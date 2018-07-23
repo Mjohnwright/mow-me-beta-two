@@ -104,7 +104,6 @@ class AllJobs extends Component {
                     <td className="tdata">{job.zipCode}</td>
                     <td className="tdata">{job.price}</td>
                     <td className="tdata">{formatDate(job.dateNeededBy)}</td>
-                    <td className="btn btn-primary"onClick={() => this.handleJobDelete(job._id)} ><strong>CLAIM</strong></td>
                     <td className="btn btn-primary"onClick={() => this.handleJobUpdate(job._id)} ><strong>UPDATE</strong></td>
 
 

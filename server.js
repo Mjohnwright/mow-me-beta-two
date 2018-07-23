@@ -1,5 +1,8 @@
 require('dotenv').config()
 
+//yarn start to start dev server
+
+
 // THIS VERSION IS SPLIT INTO 2 COMPONENTS
 const express = require('express')
 const bodyParser = require('body-parser')
@@ -52,9 +55,9 @@ mongoose.connect(
   process.env.MONGODB_URI || "mongodb://localhost:27017/mern-passport",
   {useNewUrlParser: true}
 );
-// mongoose.Promise = global.Promise
-// let MONGO_URL
-// const MONGO_LOCAL_URL = 'mongodb://localhost:27017/mern-passport'
+mongoose.Promise = global.Promise
+let MONGO_URL
+const MONGO_LOCAL_URL = 'mongodb://localhost:27017/mern-passport'
 
 // Loading evnironmental variables here
 //Serve up static assets (usually on heroku)
@@ -62,9 +65,8 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-if (process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV !== 'production') {
 	console.log('loading dev environments')
-	require('dotenv').config()
 }
 
 if (process.env.MONGODB_URI) {
