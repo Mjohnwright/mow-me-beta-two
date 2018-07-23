@@ -24,10 +24,14 @@ const DisplayLinks = props => {
 
   if (props.loggedIn) {
   return (
+    <div class="navbar transparent">
+    <nav className="navbar navbar-expand-lg"> 
+    <a class="navbar-brand"  href= "/"> <img src="https://s3.us-east-2.amazonaws.com/devteammembers/yellow-mower.png" height="80"/></a>
+    
+  
+    <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div className="navbar-nav">
       <ul className="nav">
-
-      <a class="navbar-brand"  href= "/"> <img src="https://s3.us-east-2.amazonaws.com/devteammembers/yellow-mower.png" alt="yellow-mower" height="80"/></a>
-
       
       <li className="btn btn-outlined btn-success" {...window.location.pathname === "/" ? "active" : ""}>
       <Link to="/">Home</Link>
@@ -46,15 +50,23 @@ const DisplayLinks = props => {
       </li>
 
       </ul>
+      </div>
+      </div>
+      </nav>
+      </div>
 )
  
 
 } else {
   return (
-
-      <ul className="nav">
+    <div class="navbar transparent">
+    <nav className="navbar navbar-expand-lg"> 
+    <a class="navbar-brand"  href= "/"> <img src="https://s3.us-east-2.amazonaws.com/devteammembers/yellow-mower.png" height="80"/></a>
     
-    <a class="navbar-brand"  href= "/"> <img src="https://s3.us-east-2.amazonaws.com/devteammembers/yellow-mower.png" alt="yellow-mower" height="80"/></a>
+  
+    <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div className="navbar-nav">
+      <ul className="nav">
 
       
       <li className="btn btn-outlined btn-success" {...window.location.pathname === "/" ? "active" : ""}>
@@ -71,7 +83,11 @@ const DisplayLinks = props => {
       </li>
   
       </ul>
-        
+      </div>
+      </div>
+      </nav>
+      </div>
+              
 )
 }
 }
