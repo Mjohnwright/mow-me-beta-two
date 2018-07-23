@@ -26,7 +26,7 @@ app.use(bodyParser.json())
 app.use(
 	session({
 		secret: process.env.APP_SECRET || "this is the default passphrase",
-		store: new MongoStore({ mongooseConnection: dbConnection }),
+		store: new MongoStore({ mongooseConnection: mongoose.connection }),
 		resave: false,
 		saveUninitialized: false
 	})
