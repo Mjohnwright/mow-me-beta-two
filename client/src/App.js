@@ -5,7 +5,7 @@ import { Route, Link } from 'react-router-dom'
 // Components
 import LoginForm from '../src/components/LoginForm'
 import Header from './components/Header/index'
-import Nav from './components/Nav/index'
+// import Nav from './components/Nav/index'
 
 // Pages
 import Jobs from "./pages/Jobs/Jobs";
@@ -26,7 +26,7 @@ const DisplayLinks = props => {
   return (
     <div class="navbar transparent">
     <nav className="navbar navbar-expand-lg"> 
-    <a class="navbar-brand"  href= "/"> <img src="https://s3.us-east-2.amazonaws.com/devteammembers/yellow-mower.png" height="80"/></a>
+    <a class="navbar-brand"  href= "/"> <img src="https://s3.us-east-2.amazonaws.com/devteammembers/yellow-mower.png" alt="mowme" height="80"/></a>
     
   
     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -61,7 +61,7 @@ const DisplayLinks = props => {
   return (
     <div class="navbar transparent">
     <nav className="navbar navbar-expand-lg"> 
-    <a class="navbar-brand"  href= "/"> <img src="https://s3.us-east-2.amazonaws.com/devteammembers/yellow-mower.png" height="80"/></a>
+    <a class="navbar-brand"  href= "/"> <img src="https://s3.us-east-2.amazonaws.com/devteammembers/yellow-mower.png" alt="mowme" height="80"/></a>
     
   
     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
